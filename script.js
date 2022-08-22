@@ -22,10 +22,10 @@ const getCardData = function () {
       for (let i = 0; i < 8; i++) {
         renderCards(data[i]);
       }
+
       cardsContainer.addEventListener("click", function (e) {
         e.preventDefault();
         const clickedPost = e.target;
-        console.log(clickedPost.getAttribute("id"));
         if (clickedPost.getAttribute("id") === "1") {
           window.open("page2.html", "_blank");
         } else if (clickedPost.getAttribute("id") === "2") {
