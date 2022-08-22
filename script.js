@@ -26,23 +26,8 @@ const getCardData = function () {
       cardsContainer.addEventListener("click", function (e) {
         e.preventDefault();
         const clickedPost = e.target;
-        if (clickedPost.getAttribute("id") === "1") {
-          window.open("page2.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "2") {
-          window.open("page3.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "3") {
-          window.open("page4.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "4") {
-          window.open("page5.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "5") {
-          window.open("page6.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "6") {
-          window.open("page7.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "7") {
-          window.open("page8.html", "_blank");
-        } else if (clickedPost.getAttribute("id") === "8") {
-          window.open("page9.html", "_blank");
-        }
+        const checkId =clickedPost.getAttribute("id") 
+        window.open(`https://jsonplaceholder.typicode.com/posts/${checkId}`, "_blank");
       });
     });
 };
